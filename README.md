@@ -9,9 +9,9 @@
 </div>
 
 ### 🌱 Yang Sedang Dipelajari:
-* [✅] Dasar-Dasar Bahasa Dart (Variables, Functions, Classes)
-* [✅] Memahami Widget Fundamental (Stateless vs. Stateful)
-* [✅] Layouting (Rows, Columns, Containers, Stacks)
+✅ Dasar-Dasar Bahasa Dart (Variables, Functions, Classes)
+✅ Memahami Widget Fundamental (Stateless vs. Stateful)
+✅ Layouting (Rows, Columns, Containers, Stacks)
 * [ ] Navigasi (Navigator 1.0 / 2.0 - GoRouter)
 * [ ] State Management (Provider / Bloc / GetX)
 * [ ] Bekerja dengan API (HTTP, Dio)

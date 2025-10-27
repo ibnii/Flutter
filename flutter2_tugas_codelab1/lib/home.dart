@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter2_tugas_codelab1/item_details.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -49,37 +50,45 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(top: 16, right: 16, left: 16),
               child: Card(
                 elevation: 4,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(8),
-                      child: ClipRRect(
-                        borderRadius: BorderRadiusGeometry.circular(8),
-                        child: Image.network(
-                          Item['imageUrl']!,
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(builder: (context)=> Item_details(itemData: Item,))
+                      );
+                  },
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        child: ClipRRect(
+                          borderRadius: BorderRadiusGeometry.circular(8),
+                          child: Image.network(
+                            Item['imageUrl']!,
+                            width: 100,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8, left: 8),
-                            child: Text(Item["title"]!, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8, left: 8),
-                            child: Text(Item["description"]!),
-                          )
-                        ],
-                      )
-                    ),
-                  ],
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8, left: 8),
+                              child: Text(Item["title"]!, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8, left: 8),
+                              child: Text(Item["description"]!),
+                            )
+                          ],
+                        )
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );
